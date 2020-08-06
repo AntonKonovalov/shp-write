@@ -17,7 +17,7 @@ module.exports = function(gj, options) {
                 // geometry type
                 l.type,
                 // geometries
-                l.geometries,
+                l.geometries[0],
                 function(err, files) {
                     var fileName = options && options.types[l.type.toLowerCase()] ? options.types[l.type.toLowerCase()] : l.type;
                     layers.file(fileName + '.shp', files.shp.buffer, { binary: true });
