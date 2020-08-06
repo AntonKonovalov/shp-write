@@ -12,7 +12,7 @@ module.exports.write = function writePoints(geometries, extent, shpView, shxView
     function writePolyLine(coordinates, i) {
 
         var flattened = justCoords(coordinates),
-            noParts = parts([coordinates], TYPE),
+            noParts = parts([[coordinates]], TYPE),
             contentLength = (flattened.length * 16) + 48 + (noParts - 1) * 4;
 
         var featureExtent = flattened.reduce(function(extent, c) {
