@@ -41,5 +41,5 @@ module.exports = function(gj, options) {
       generateOptions.type = 'nodebuffer';
     }
 
-    return zip.generateNodeStream(generateOptions);
+    return zip.generateAsync(generateOptions);
 };
